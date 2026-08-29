@@ -21,7 +21,9 @@ setup(
     maintainer_email='marco@example.com',
     description='Simple task publisher for EAI scenarios.',
     license='Apache License 2.0',
-    tests_require=['pytest'],
+    extras_require={
+        'test': ['pytest'],
+    },
     entry_points={
         'console_scripts': [
             'task_publisher = eai_task_server.task_publisher:main',
